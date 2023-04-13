@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Register</title>
+</head>
+<body>
+    <h1>Register here</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <input type="submit" name="submit" value="Register">
+    </form>
+    {% if submit_button == "Register" %}
+    <h3>Name is : {{ name }}</h3>
+    <h3>Email is : {{ email }}</h3>
+    <h3>Password is : {{ name }}</h3>
+    {% endif %}
+</body>
+</html>

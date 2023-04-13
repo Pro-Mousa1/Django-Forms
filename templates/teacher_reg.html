@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Teacher Register</title>
+</head>
+<body>
+     <h1>Teacher registration</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ mwalimu_form.as_p }}
+        <input type="submit" name="t-submit" value="Tuma" >
+    </form>
+   {% if submit_button == "Tuma" %}
+    <h3>Name is : {{ name }}</h3>
+    <h3>Gender is : {{ gender }}</h3>
+    <h3>Salary is : {{ salary }}</h3>
+    <h3>Age is : {{ age }}</h3>
+    {% endif %}
+</body>
+</html>

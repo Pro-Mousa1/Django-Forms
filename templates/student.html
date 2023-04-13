@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Student Info</title>
+</head>
+<body>
+    <h1>Student Information</h1>
+    <form method="POST" action="">
+        {% csrf_token %}
+        {{ studente_form.as_p }}
+        <input type="submit" name="s-submit" value="Info">
+        {% if submit_button == 'Info' %}
+        <h3>Name is : {{ name }}</h3>
+        <h3>Admission_no is : {{ admission_no }}</h3>
+        <h3>Dormitory is : {{ dormitory }}</h3>
+        <h3>Stream is : {{ stream }}</h3>
+        <h3>Age is : {{ age }}</h3>
+        {% endif %}
+    </form>
+</body>
+</html>
